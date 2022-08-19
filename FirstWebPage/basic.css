@@ -1,0 +1,19 @@
+h2{
+color:red;
+/* this is CSS commenting
+border-color: purple;
+border-width: 2px;
+border-style: solid;
+*/
+/*You can also specify all three in one go*/
+border: 2px solid purple;
+}
+li{
+border: 2px solid green;
+color: brown;
+}
+
+#blueparagraph
+{
+	color: blue;
+}
