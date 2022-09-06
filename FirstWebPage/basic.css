@@ -17,3 +17,73 @@ color: brown;
 {
 	color: blue;
 }
+.boardslotinput
+{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	padding: 0;
+}
+.boardslot
+{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	padding: 0;
+}
+#banner
+{
+
+	
+}
+.box{
+	background-color: #444;
+	padding: 0;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(4, [col] auto ) ;
+  grid-template-rows: repeat(1, [row] auto  );
+  padding: 0;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  padding: 0;
+}
+.grid-item2 {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.inner-grid-container
+{
+	grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, [col] 150px);
+    grid-template-rows: repeat(2, [row] 240px);
+	background-color: #2136F3;
+}
+.inner-grid-item
+{
+	grid-column: 1 / 4;
+	grid-row: 1 / 4;
+	padding: 0;
+}
+.bb
+{
+	
+	border-right-width: 5px;
+	border-color: black;
+}

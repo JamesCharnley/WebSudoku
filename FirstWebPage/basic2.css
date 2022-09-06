@@ -1,0 +1,99 @@
+body{
+	padding: 0px;
+	margin: 0px;
+}
+#banner
+{
+	padding: 0px;
+	margin: 0px;
+	height: 170px;
+}
+.three-col-page
+{
+	padding: 0 0;
+	display: grid;
+	grid-template-columns: auto 50% auto;
+	
+}
+.left-col
+{
+	background-color: rgb(255, 122, 89);
+}
+.center-col
+{
+	background-color: black;
+}
+.right-col
+{
+	background-color: rgb(255, 122, 89);
+}
+.game-grid
+{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+	grid-gap: 0 0;
+
+	border-style: solid;
+	border-color: green;
+	padding: 0 0;
+	margin: 0 0;
+}
+.box
+{
+	background-color: red;
+	border-style: solid;
+	border-color: cyan;
+}
+.a 
+{
+	background-color: yellow;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row: 1 / 4;
+	display: grid;
+	grid-template-columns: repeat(9, auto);
+	grid-template-rows: repeat(9, auto);
+	grid-row-gap: 0px;
+	grid-column-gap: 0px;
+	border-spacing: 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	padding-left: auto;
+	padding-right: auto;
+}
+.b
+{
+	grid-column: 2 / 3;
+}
+.c
+{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 0 0;
+	background-color: grey;
+}
+.board-slot
+{
+	width: 40px;
+	height: 40px;
+	/*border-style: solid;
+	border-color: pink;
+	border-width: 2px;*/
+	margin: 0 0;
+	padding: 0 0;
+	border-spacing: 0 0;
+}
+.board-input
+{
+	width: 40px;
+	height: 40px;
+	/*border-color: blue;
+	border-width: 1px;
+	border-spacing: 0px;
+	*/
+	text-align: center;
+	margin: 0 0;
+	padding: 0 0;
+}
