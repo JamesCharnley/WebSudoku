@@ -12,7 +12,7 @@ body{
 {
 	padding: 0 0;
 	display: grid;
-	grid-template-columns: auto 50% auto;
+	grid-template-columns: auto 40% auto;
 	
 }
 .left-col
@@ -26,6 +26,12 @@ body{
 .right-col
 {
 	background-color: rgb(255, 122, 89);
+}
+.filler
+{
+	background-color: rgb(255, 122, 89);
+	height: 100vh;
+  	width: 100vw;
 }
 .game-grid
 {
@@ -73,6 +79,10 @@ body{
 	grid-template-rows: repeat(2, auto);
 	grid-gap: 0 0;
 	background-color: grey;
+}
+.d
+{
+
 }
 .board-slot
 {

@@ -2,14 +2,16 @@ var boardslots = document.getElementsByClassName("board-input");
 
 var board = [[9], [9], [9], [9], [9], [9], [9], [9], [9]]; 
 var startBoard = [[9], [9], [9], [9], [9], [9], [9], [9], [9]]; 
-
+var difCount = 7;
 Update2DArray();
 
 GenerateRandomPuzzle();
 
+
+
 function GenerateRandomPuzzle()
 {
-    for (var i = 0; i < 7; i++) 
+    for (var i = 0; i < difCount; i++) 
     {
         for (var x = 0; x < 9; x++) 
         {
@@ -46,6 +48,7 @@ function GenerateRandomPuzzle()
     }
 
     UpdateElements();
+    Update2DArray();
 }
 
 function ResetBoard(_board)
@@ -121,11 +124,29 @@ clearBtn.addEventListener('click', event => {
 function FinishButtonPressed() 
 {
     Update2DArray();
-    var ts = new Slot();
-    ts.x = 5;
-    ts.y = 8;
-    FindEmpty(ts);
+    var solved = true;
+    for(var x = 0; x < 9; x++)
+    {
+        for(var y = 0; y < 9; y++)
+        {
+            var num = board[x][y];
+            board[x][y] = 0;
+            if(IsValid(x, y, num) == false)
+            {
+                board[x][y] = num;
+                solved = false;
+            }
+        }
+    }
     
+    if(solved == true)
+    {
+        alert("Solved");
+    }
+    else
+    {
+        alert("Incorrect or empty entries on board");
+    }
 }
 let btn = document.getElementById("finish-button");
 btn.addEventListener('click', event => {
@@ -149,6 +170,37 @@ let solvebtn = document.getElementById("solve-button");
 solvebtn.addEventListener('click', event => {
     SolveButtonPressed();
 });
+
+let easyBtn = document.getElementById("easy-button");
+easyBtn.addEventListener('click', event => {
+    EasyButtonPressed();
+});
+
+let mediumBtn = document.getElementById("medium-button");
+mediumBtn.addEventListener('click', event => {
+    MediumButtonPressed();
+});
+
+let hardBtn = document.getElementById("hard-button");
+hardBtn.addEventListener('click', event => {
+    HardButtonPressed();
+});
+
+function EasyButtonPressed()
+{
+    difCount = 7;
+    NewGame();
+}
+function MediumButtonPressed()
+{
+    difCount = 5;
+    NewGame();
+}
+function HardButtonPressed()
+{
+    difCount = 3;
+    NewGame();
+}
 
 function Slot()
 {
@@ -183,7 +235,7 @@ function Update2DArray()
     var count = 0;
     Array.prototype.forEach.call(boardslots, function(slot) {
         
-        if(slot.value == "")
+        if(slot.value == "" || slot.value == undefined)
         {
             board[x][y] = 0;
         }
